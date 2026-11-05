@@ -1,0 +1,68 @@
+/* Integrated imagery: complete compositions, no image cards or cropping. */
+.visual,.uk-packs figure,.uk-packs .visual{overflow:visible;background:transparent;border:0;border-radius:0;box-shadow:none}
+.visual img,.visual:hover img,
+.flavour-card.strawberry .visual img,.flavour-card.chocolate .visual img{
+  object-fit:contain;transform:none;transition:none;border-radius:0;
+}
+.product-benefits{background:#fff}
+.benefits-product{padding:0;background:transparent;border:0;border-radius:0;box-shadow:none}
+.benefits-product .visual{height:450px;aspect-ratio:auto}
+.benefits-product figcaption{margin-top:16px}
+.flavour-card>.visual{height:470px;padding:10px 0;margin:22px 0;background:transparent;border-radius:0}
+.flavour-card .visual img{object-position:center center}
+.spec-panel{background:transparent;border:0;border-radius:0;padding:28px 0}
+.spec-visual .visual{height:430px}
+.uk-packs{gap:14px;align-items:end}
+.uk-packs .visual{position:static;aspect-ratio:auto;height:360px;max-width:none;margin:0;padding:8px 0}
+.uk-packs .visual img{position:static;inset:auto;width:100%;max-width:100%;height:100%;margin:0;object-fit:contain;transform:none}
+.hero-visual .market-art{padding:0}
+.case-images .visual{height:360px}
+/* Feather only the empty studio backdrop; the box itself remains intact. */
+.case-images img{
+  width:auto;max-width:100%;height:100%;margin-inline:auto;
+  mask-image:linear-gradient(to right,transparent,#000 10%,#000 90%,transparent),linear-gradient(to bottom,transparent,#000 12%,#000 90%,transparent);
+  mask-composite:intersect;
+  mix-blend-mode:multiply;
+}
+.pallet-detail img,.market-art[data-market-art=es] img{mix-blend-mode:multiply}
+/* Real in-store photographs keep their original aspect ratio and full scene. */
+.shelf-layout{grid-template-columns:1fr;gap:34px}
+.selling-points{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}
+.selling-points>div{border:0;padding:0}
+.shelf-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:auto auto;align-items:start;gap:28px}
+.shelf-gallery .visual{height:auto;grid-column:auto;grid-row:auto;border-radius:0}
+.shelf-gallery .visual img{width:100%;height:auto;object-fit:contain}
+.shelf-gallery .shelf-wide{grid-column:1/-1;grid-row:2;max-width:980px;justify-self:center}
+.print-examples{display:block}
+.print-examples .visual{height:auto}
+.print-examples img{height:auto;max-height:460px}
+.image-dialog{background:transparent;border:0;border-radius:0;box-shadow:none;overflow:visible;padding:12px;max-height:96dvh}
+.image-dialog::backdrop{background:rgba(255,255,255,.97);backdrop-filter:blur(8px)}
+.image-dialog img{width:auto;height:auto;max-width:100%;max-height:76dvh;object-fit:contain;margin:10px auto;transform:none}
+.image-dialog p{color:var(--ink)}
+figure,.visual{break-inside:avoid}
+@media(max-width:1120px) and (min-width:761px){
+  .flavour-card>.visual{height:390px}
+  .uk-packs .visual{height:320px}
+}
+@media(max-width:760px){
+  .benefits-product{padding:0;max-width:440px}
+  .benefits-product .visual{height:390px}
+  .flavour-card>.visual{height:440px;width:100%;max-width:440px;padding:8px 0}
+  .uk-packs{gap:8px}
+  .uk-packs .visual{height:260px;padding:4px 0}
+  .spec-panel{padding:20px 0}
+  .spec-visual .visual{height:390px}
+  .case-images .visual{height:280px}
+  .selling-points{grid-template-columns:1fr;gap:24px}
+  .shelf-gallery{grid-template-columns:1fr;grid-template-rows:none;gap:30px}
+  .shelf-gallery .visual,.shelf-gallery .shelf-wide{grid-column:auto;grid-row:auto;max-width:100%}
+  .image-dialog{max-width:96vw;padding:8px}
+  .image-dialog img{max-height:70dvh}
+}
+@media print{
+  .flavour-card>.visual,.benefits-product .visual,.spec-visual .visual{height:220px}
+  .uk-packs .visual{height:240px}
+  .shelf-gallery{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:auto auto}
+  .shelf-gallery .shelf-wide{grid-column:1/-1;grid-row:2}
+}
