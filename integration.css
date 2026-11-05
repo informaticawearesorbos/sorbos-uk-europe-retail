@@ -74,3 +74,33 @@ figure,.visual{break-inside:avoid}
   .shelf-gallery{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:auto auto}
   .shelf-gallery .shelf-wide{grid-column:1/-1;grid-row:2}
 }
+
+/* Two commercial routes, followed by shared customisation possibilities. */
+.branding-routes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:64px;margin-top:46px}
+.branding-route{border-top:2px solid var(--ink);padding-top:26px;min-width:0}
+.branding-route h3{font-size:clamp(29px,2.7vw,38px);line-height:1.14;margin:12px 0 18px;letter-spacing:-.035em}
+.branding-route .route-description{font-size:20px;line-height:1.55;min-height:124px;margin:0}
+.brand-signature{display:flex;align-items:center;justify-content:center;gap:22px;height:94px;margin:16px 0 0;font-size:21px;font-weight:750;letter-spacing:.04em;color:var(--ink)}
+.brand-signature img{width:108px;height:auto;object-fit:contain}
+.signature-times{font-size:26px;font-weight:400;color:var(--muted)}
+.branding-route figure{margin:0;text-align:center}
+.branding-route .branding-visual{display:block;position:relative;aspect-ratio:auto;width:100%;height:398px;margin:0;padding:0;overflow:visible}
+.branding-route .branding-visual img{position:absolute;max-width:none;object-fit:contain;transform:none}
+/* Match the visible carton height (320px), preserving the complete source canvas. */
+.route-private .branding-visual img{width:348.20px;height:417.85px;left:calc(50% - 174.10px);top:-30.49px}
+.route-collaboration .branding-visual img{width:262.30px;height:426.23px;left:calc(50% - 123.11px);top:-36.39px}
+.branding-route figcaption{font-size:15px;line-height:1.5;min-height:46px;padding:0 16px;color:var(--muted)}
+.branding-route .route-result{font-size:20px;font-weight:650;text-align:center;margin:18px 0 0;color:var(--ink)}
+.customisation-surfaces{border-top:1px solid var(--line);margin-top:58px;padding-top:38px}
+.customisation-surfaces>h3{font-size:clamp(29px,3vw,38px);line-height:1.18;letter-spacing:-.03em;margin:12px 0 32px}
+.surface-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px}
+.surface-number{color:var(--pink,#d84070);font-size:18px;font-weight:700}
+.surface-grid h4{font-size:25px;line-height:1.2;margin:10px 0 12px;letter-spacing:-.02em}
+.surface-grid p{font-size:19px;line-height:1.55;margin:0}
+.branding-close{margin-top:38px;display:flex;align-items:center;justify-content:space-between;gap:35px;padding-top:28px;border-top:1px solid var(--line)}
+.branding-close p{font-size:20px;max-width:630px;margin:0}
+.branding-close .text-link{flex-shrink:0;font-size:18px}
+#customization .image-note{margin-top:30px;font-size:14px;line-height:1.6}
+@media(max-width:900px){.branding-routes{gap:32px}.branding-route .route-description{min-height:186px}.branding-close{display:block}.branding-close .text-link{display:inline-block;margin-top:18px}}
+@media(max-width:760px){.branding-routes{grid-template-columns:1fr;gap:42px;margin-top:32px}.branding-route .route-description{min-height:0;font-size:19px}.branding-route .branding-visual{height:380px}.brand-signature{font-size:19px;gap:18px}.branding-route figcaption{min-height:0}.customisation-surfaces{margin-top:42px;padding-top:28px}.surface-grid{grid-template-columns:1fr;gap:28px}.surface-grid h4{font-size:25px}.branding-close{margin-top:28px}}
+@media print{.branding-routes{grid-template-columns:1fr 1fr;gap:30px}.branding-route{break-inside:avoid}.surface-grid{grid-template-columns:repeat(3,1fr)}}

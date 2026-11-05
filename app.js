@@ -55,32 +55,6 @@ document.querySelectorAll('[data-flavour]').forEach(button => {
   });
 });
 document.querySelectorAll('[data-select]').forEach(link => link.addEventListener('click', () => selectFlavour(link.dataset.select)));
-const customOptions = ['private', 'pack', 'print'];
-let selectedCustom = 'private';
-function selectCustom(value) {
-  if (!customOptions.includes(value)) return;
-  selectedCustom = value;
-  document.querySelectorAll('[data-custom]').forEach(button => {
-    const active = button.dataset.custom === value;
-    button.setAttribute('aria-selected', String(active));
-    button.tabIndex = active ? 0 : -1;
-  });
-  document.querySelectorAll('.custom-panel').forEach(panel => { panel.hidden = panel.id !== 'custom-' + value; });
-}
-document.querySelectorAll('[data-custom]').forEach(button => {
-  button.addEventListener('click', () => selectCustom(button.dataset.custom));
-  button.addEventListener('keydown', event => {
-    if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
-    event.preventDefault();
-    let index = customOptions.indexOf(selectedCustom);
-    if (event.key === 'ArrowRight') index = (index + 1) % customOptions.length;
-    if (event.key === 'ArrowLeft') index = (index + customOptions.length - 1) % customOptions.length;
-    if (event.key === 'Home') index = 0;
-    if (event.key === 'End') index = customOptions.length - 1;
-    selectCustom(customOptions[index]);
-    document.getElementById('custom-tab-' + selectedCustom).focus();
-  });
-});
 document.querySelectorAll('[data-zoom]').forEach(button => button.addEventListener('click', () => {
   lastZoom = button;
   zoomImage.src = button.dataset.zoom;
