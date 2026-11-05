@@ -136,3 +136,8 @@ figure,.visual{break-inside:avoid}
 @media print{.lto-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}.lto-edition{break-inside:avoid}.lto-edition .lto-visual{height:210px}.lto-heading{grid-template-columns:1fr 1fr}.lto-occasions{grid-template-columns:1fr 2fr}}
 
 @media(max-width:760px){.branding-route .branding-visual{height:430px}.route-private .branding-visual img{width:348.20px;height:417.85px;left:calc(50% - 174.10px);top:-30.49px}.route-collaboration .branding-visual img{width:233.24px;height:379.02px;left:calc(50% - 113.07px);top:-6.79px}}
+
+/* Full unwrapped straw added to the existing editable compositions. */
+.route-collaboration .branding-visual img{left:calc(50% - 167px)}
+.straw-print-note{font-size:15px;line-height:1.6;color:var(--muted);max-width:940px;margin:28px auto 0;text-align:center}
+@media(max-width:760px){.route-collaboration .branding-visual img{left:calc(50% - 134px)}.straw-print-note{text-align:left;font-size:14px}}
