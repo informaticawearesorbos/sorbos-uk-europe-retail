@@ -1,0 +1,24 @@
+/* v18: matched display photographs, coordinated drink close-ups, broad pack compositions. */
+.case-section{grid-template-columns:1.6fr 1fr;gap:38px}
+.case-images{gap:24px;align-items:end}
+.case-images .visual{height:auto;aspect-ratio:640/1100;overflow:visible}
+.case-images img{object-fit:contain;object-position:center bottom}
+.spec-panel{grid-template-columns:1.02fr 1fr;gap:48px;padding:24px 0;align-items:center}
+.spec-visual{min-width:0}
+.spec-visual .visual{position:relative;width:100%;height:auto;aspect-ratio:660/800;overflow:hidden;mask-image:linear-gradient(#000 0%,#000 88%,transparent 100%)}
+.spec-visual .visual img,.spec-visual .visual:hover img{position:absolute;height:auto;max-width:none;object-fit:initial;transform:none;transition:none;width:134.393939%;left:-19.69697%;top:-18.125%}
+#spec-lime .visual img{left:-12.121212%;top:-12.75%}
+#spec-chocolate .visual img{width:108.968059%;left:-3.439803%;top:-4.25532%}
+.spec-detail-caption{text-align:center;margin-top:4px;font-size:13px}
+.branding-route{grid-template-columns:1.2fr 1fr;gap:42px;align-items:center}
+#customization .branding-route:not(.route-private) .branding-visual{width:100%;height:auto;aspect-ratio:1330/1420;max-height:none}
+.branding-route:not(.route-private) .visual img{object-fit:contain;transform:none}
+.lto-edition .lto-visual{height:auto;aspect-ratio:1330/1420;max-width:none}
+.lto-edition .lto-visual img{transform:none}
+@media(max-width:1100px) and (min-width:761px){.spec-panel{gap:28px;grid-template-columns:1fr 1fr}.case-images{gap:16px}}
+@media(max-width:760px){
+ .case-section{grid-template-columns:1fr}.case-images{gap:10px}.case-images .visual{height:auto;aspect-ratio:640/1100}
+ .spec-panel{grid-template-columns:1fr;padding:18px 0;gap:24px}.spec-visual .visual{height:auto;aspect-ratio:660/800;max-width:none}.spec-detail-caption{font-size:12px}
+ .branding-route{grid-template-columns:1fr;gap:24px}#customization .branding-route:not(.route-private) .branding-visual{height:auto;aspect-ratio:1330/1420}
+ .lto-edition .lto-visual{height:auto;aspect-ratio:1330/1420}
+}
