@@ -1,56 +1,59 @@
-/* v14: horizontal product, balanced upper/lower callouts, original aspect preserved. */
-.experience-section{background:#fff;padding-block:56px}
-.experience-section>.wrap{max-width:1060px}
-.experience-heading{max-width:760px;margin:0 auto 36px;text-align:center}
+/* Original colourful UI illustration around an unchanged product photograph. */
+.experience-section{background:#fff;padding-block:52px}
+.experience-section>.wrap{max-width:1100px}
+.experience-heading{max-width:780px;margin:0 auto 32px;text-align:center}
 .experience-heading .kicker{margin-bottom:12px}
 .experience-heading h2{font-size:clamp(34px,3.5vw,46px);line-height:1.13;letter-spacing:-.04em;margin:0 0 16px}
 .experience-heading h2 em{font-style:normal;color:var(--pink)}
 .experience-heading>p:last-child{max-width:640px;margin:0 auto;font-size:20px;line-height:1.5;color:var(--muted)}
-.experience-map{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto auto;column-gap:90px;row-gap:0;max-width:900px;margin:0 auto;position:relative;align-items:start}
-.experience-point{position:relative;padding:0;width:100%;min-width:0;text-align:center;max-width:340px;justify-self:center}
-.point-duration{grid-area:1/1}.point-edible{grid-area:1/2}
-.point-drink{grid-area:3/1}.point-wrapper{grid-area:3/2}
-.experience-point h3{font-size:24px;line-height:1.2;letter-spacing:-.025em;margin:0 0 10px;font-weight:700}
+.experience-map{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto 180px auto;column-gap:72px;row-gap:0;max-width:960px;margin:0 auto;position:relative;align-items:start}
+.experience-point{width:100%;min-width:0;max-width:360px;justify-self:center;text-align:center;position:relative}
+.point-duration{grid-area:1/1;--accent:#7c8e30;--tint:#f0f4d9}
+.point-edible{grid-area:1/2;--accent:#d84070;--tint:#fbe2eb}
+.point-drink{grid-area:3/1;--accent:#437b96;--tint:#e2f1f5}
+.point-wrapper{grid-area:3/2;--accent:#936247;--tint:#f5e9df}
+.point-visual{display:flex;align-items:center;justify-content:center;gap:18px;min-height:92px;margin-bottom:12px}
+.icon-bubble{display:grid;place-items:center;flex-shrink:0;width:80px;height:80px;border-radius:45% 55% 51% 49%/49% 43% 57% 51%;background:var(--tint);color:var(--accent);transform:rotate(-5deg)}
+.benefit-icon{width:59px;height:59px;transform:rotate(5deg)}
+.experience-point h3{font-size:23px;line-height:1.2;letter-spacing:-.025em;margin:0;font-weight:700;text-align:left;max-width:235px}
 .experience-point>p{font-size:18px;line-height:1.5;margin:0;color:var(--muted)}
-.point-duration h3,.point-edible h3{color:var(--pink);font-size:24px;line-height:1.15;white-space:nowrap}
-.point-duration h3 strong,.point-edible h3 strong{font-size:42px;line-height:1;letter-spacing:-.045em;font-weight:750;display:inline}
-.experience-straw{grid-column:1/-1;grid-row:2;margin:0;width:100%;position:relative;align-self:center}
-.experience-straw:before{display:none}
-.experience-straw .visual{display:block;width:100%;height:auto;aspect-ratio:1140/130;padding:0;margin:18px 0;border:0;background:transparent}
+.point-duration h3,.point-edible h3{color:var(--accent)}
+.point-duration h3 strong,.point-edible h3 strong{font-size:48px;line-height:1;letter-spacing:-.04em;font-weight:750;display:block}
+.metric-label{display:block;font-size:22px;line-height:1.2;margin-top:4px}
+.point-drink .point-visual,.point-wrapper .point-visual{min-height:70px;margin-bottom:10px;gap:14px}
+.point-drink .icon-bubble,.point-wrapper .icon-bubble{width:58px;height:58px}
+.point-drink .benefit-icon,.point-wrapper .benefit-icon{width:43px;height:43px}
+.experience-straw{grid-column:1/-1;grid-row:2;margin:0;width:100%;height:180px;position:relative;display:grid;align-items:center;isolation:isolate;container-type:inline-size}
+.experience-straw:before{content:'';position:absolute;z-index:-1;left:2%;width:96%;height:70px;top:50%;transform:translateY(-50%) rotate(-1deg);background:#fff4f7;border-radius:50% 44% 48% 45%/40% 50% 46% 60%}
+.experience-straw .visual{display:block;position:relative;z-index:2;width:100%;height:auto;aspect-ratio:1140/130;padding:0;margin:0;border:0;background:transparent}
 .experience-straw .visual img,.experience-straw .visual:hover img{display:block;position:static;width:100%;height:100%;max-width:100%;object-fit:contain;transform:none;transition:none}
-.experience-arrow{display:block;width:46px;height:40px;fill:none;stroke:var(--pink);stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round;pointer-events:none;margin:12px auto 0}
-.point-edible .experience-arrow{transform:scaleX(-1)}
-.point-drink,.point-wrapper{display:flex;flex-direction:column}
-.point-drink .experience-arrow,.point-wrapper .experience-arrow{order:-1;transform:rotate(180deg);margin:0 auto 12px}
-.point-wrapper .experience-arrow{transform:rotate(180deg) scaleX(-1)}
-.experience-details{display:grid;grid-template-columns:.8fr 1fr 1.4fr;gap:28px;max-width:900px;margin:38px auto 0;padding-top:24px;border-top:1px solid var(--line)}
+.product-connectors{position:absolute;left:0;width:100%;height:calc(50% - 1.65cqw);z-index:3;pointer-events:none;overflow:visible}
+.connector-top{top:0}.connector-bottom{bottom:0}
+.product-connectors>path{fill:none;stroke-width:3.2;stroke-linecap:round;vector-effect:non-scaling-stroke}
+.connector-lime{stroke:#7c8e30}.connector-pink{stroke:#d84070}.connector-blue{stroke:#437b96}.connector-cocoa{stroke:#936247}
+.experience-details{display:grid;grid-template-columns:.8fr 1fr 1.4fr;gap:28px;max-width:960px;margin:32px auto 0;padding-top:24px;border-top:1px solid var(--line)}
 .experience-details h3{font-size:18px;line-height:1.3;margin:0 0 7px;letter-spacing:-.02em}
 .experience-details p{font-size:14px;line-height:1.5;color:var(--muted);margin:0}
-.experience-section .benefits-footnote{margin:18px auto 0;font-size:12px;line-height:1.55;max-width:900px}
+.experience-section .benefits-footnote{margin:18px auto 0;font-size:12px;line-height:1.55;max-width:960px}
 @media(max-width:760px){
- .experience-section{padding-block:38px}
- .experience-heading{margin-bottom:28px}
- .experience-heading h2{font-size:34px;max-width:420px;margin:0 auto 14px}
- .experience-heading>p:last-child{font-size:17px;line-height:1.55;max-width:400px}
+ .experience-section{padding-block:36px}.experience-heading{margin-bottom:24px}
+ .experience-heading h2{font-size:33px;max-width:420px;margin:0 auto 14px}
+ .experience-heading>p:last-child{font-size:16px;line-height:1.55;max-width:400px}
  .experience-heading .kicker{font-size:11px;margin-bottom:12px}
- .experience-map{column-gap:24px;max-width:540px}
- .experience-point h3{font-size:18px;line-height:1.25;margin-bottom:8px;letter-spacing:-.025em}
+ .experience-map{column-gap:22px;grid-template-rows:auto 124px auto;max-width:540px}
+ .point-visual{flex-direction:column;gap:8px;min-height:0;margin-bottom:10px}
+ .icon-bubble{width:53px;height:53px}.benefit-icon{width:40px;height:40px}
+ .experience-point h3{text-align:center;font-size:18px;line-height:1.25;max-width:none}
+ .point-duration h3 strong,.point-edible h3 strong{font-size:34px}.metric-label{font-size:17px;margin-top:3px}
  .experience-point>p{font-size:15px;line-height:1.45}
- .point-duration h3,.point-edible h3{font-size:17px;white-space:normal;min-height:55px}
- .point-duration h3 strong,.point-edible h3 strong{font-size:32px}
- .point-duration h3 strong,.point-edible h3 strong{display:block;margin-bottom:3px}
- .experience-straw .visual{margin:14px 0}
- .experience-arrow{width:34px;height:32px;stroke-width:1.8;margin-top:10px}
- .point-drink .experience-arrow,.point-wrapper .experience-arrow{margin-bottom:10px}
+ .experience-straw{height:124px}.experience-straw:before{height:44px;left:0;width:100%}
+ .product-connectors>path{stroke-width:2.4}
+ .point-drink .point-visual,.point-wrapper .point-visual{gap:9px;min-height:0;margin-bottom:9px}
+ .point-drink .icon-bubble,.point-wrapper .icon-bubble{width:43px;height:43px}
+ .point-drink .benefit-icon,.point-wrapper .benefit-icon{width:33px;height:33px}
  .experience-details{grid-template-columns:1fr 1fr;gap:18px 20px;padding-top:22px;margin-top:28px}
- .experience-details>div:last-child{grid-column:1/-1}
- .experience-details h3{font-size:16px;margin-bottom:6px}
- .experience-details p{font-size:13px}
+ .experience-details>div:last-child{grid-column:1/-1}.experience-details h3{font-size:16px;margin-bottom:6px}.experience-details p{font-size:13px}
  .experience-section .benefits-footnote{font-size:11px;line-height:1.55;margin-top:16px}
 }
-@media(max-width:374px){
- .experience-heading h2{font-size:31px}.experience-heading>p:last-child{font-size:16px}
- .experience-map{column-gap:18px}.experience-point h3{font-size:17px}.experience-point>p{font-size:14px}
- .point-duration h3,.point-edible h3{font-size:16px}.point-duration h3 strong,.point-edible h3 strong{font-size:30px}
-}
+@media(max-width:374px){.experience-heading h2{font-size:30px}.experience-map{column-gap:18px}.experience-point h3{font-size:17px}.experience-point>p{font-size:14px}.metric-label{font-size:16px}}
 @media print{.experience-section{break-inside:avoid}.experience-heading h2{font-size:36px}.experience-map{max-width:800px}.experience-details{grid-template-columns:.8fr 1fr 1.4fr}.experience-details>div:last-child{grid-column:auto}}

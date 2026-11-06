@@ -5,7 +5,7 @@
 #home .hero-range{height:420px;padding:0;width:100%}
 #home .hero-range img{width:100%;height:100%;object-fit:contain;transform:none}
 #home .hero-visual .small{font-size:14px;line-height:1.5;margin-top:12px}
-.flavour-portfolio{display:grid;grid-template-columns:repeat(11,minmax(0,1fr));gap:5px;margin-top:8px}
+.flavour-portfolio{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:5px;margin-top:8px}
 .flavour-portfolio figure{margin:0;min-width:0;text-align:center}
 .flavour-portfolio figcaption{height:54px;display:flex;align-items:center;justify-content:center;font-size:16px;line-height:1.25;font-weight:650;padding:0 3px;color:var(--ink)}
 .flavour-portfolio .visual{width:100%;height:370px;padding:0}
@@ -84,3 +84,5 @@
  .display-concepts h4{font-size:24px}
 }
 @media(max-width:370px){#home h1{font-size:39px}.flavour-portfolio .visual{height:220px}.flavour-portfolio figcaption{font-size:14px}.branding-route h3{font-size:32px}}
+
+.flavour-development .development-badge{display:table;margin:12px auto 0;padding:5px 8px;border-radius:20px;background:#faedf2;color:#a32d55;font-size:11px;font-weight:650;line-height:1.3;text-align:center}
