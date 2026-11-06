@@ -1,0 +1,7 @@
+.sheet-intro{font-size:18px;color:var(--muted);line-height:1.55;margin:18px 0}
+.technical-sheet-preview{height:auto;aspect-ratio:16/9;margin:22px 0 14px;box-shadow:0 4px 22px #172e3812;background:#fff;overflow:visible}
+.technical-sheet-preview img,.technical-sheet-preview:hover img{height:100%;width:100%;object-fit:contain;transform:none}
+.technical-sheet-actions{display:flex;gap:22px;align-items:center;flex-wrap:wrap;margin-top:24px}
+.technical-sheet-actions .button{font-size:16px}.technical-sheet-actions .text-link{font-size:16px;font-weight:650}
+#downloads .download-row{gap:40px}#downloads .download-row>div{max-width:780px}
+@media(max-width:760px){.sheet-intro{font-size:17px}.technical-sheet-actions{gap:18px;margin-top:20px}.technical-sheet-preview{margin-top:20px}.technical-sheet-actions .button{font-size:15px}}
