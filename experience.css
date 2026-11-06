@@ -1,0 +1,44 @@
+/* Photographic product infographic — editable copy, complete original product. */
+.experience-section{background:#fff}
+.experience-heading{max-width:880px;margin:0 auto 42px;text-align:center}
+.experience-heading h2{font-size:clamp(40px,4.6vw,64px);line-height:1.14;letter-spacing:-.045em;margin:14px 0 22px}
+.experience-heading h2 em{font-style:normal;color:var(--pink)}
+.experience-heading>p:last-child{max-width:720px;margin:0 auto;font-size:22px;line-height:1.55;color:var(--muted)}
+.experience-map{display:grid;grid-template-columns:minmax(0,1fr) 110px minmax(0,1fr);grid-template-rows:1fr 1fr;column-gap:100px;row-gap:65px;max-width:1060px;margin:0 auto;position:relative;padding:30px 0 40px;align-items:start}
+.experience-straw{grid-column:2;grid-row:1/3;align-self:center;margin:0;position:relative}
+.experience-straw:before{content:'';position:absolute;inset:0 -65px;background:radial-gradient(ellipse,rgba(246,218,229,.34),rgba(255,255,255,0) 65%);pointer-events:none}
+.experience-straw .visual{display:block;width:100%;height:590px;padding:0;aspect-ratio:auto;margin:0;border:0;background:transparent}
+.experience-straw .visual img{width:100%;height:100%;object-fit:contain;position:relative;max-width:100%;transform:none}
+.experience-point{position:relative;padding:12px 0 30px;width:100%;max-width:310px;min-width:0}
+.point-duration{grid-area:1/1;justify-self:end;margin-top:6px}
+.point-edible{grid-area:1/3;margin-top:88px}
+.point-drink{grid-area:2/1;justify-self:end}
+.point-wrapper{grid-area:2/3;margin-top:40px}
+.experience-eyebrow{font-size:13px!important;font-weight:750;letter-spacing:.1em;color:var(--pink)!important;margin:0 0 13px!important}
+.experience-point h3{font-size:32px;line-height:1.12;letter-spacing:-.035em;margin:0 0 16px}
+.experience-point>p:not(.experience-eyebrow){font-size:19px;line-height:1.5;margin:0;color:var(--muted)}
+.point-duration h3{font-size:33px;color:var(--pink)}
+.point-duration h3 strong{font-size:76px;letter-spacing:-.065em}
+.point-edible h3{color:var(--pink)}
+.experience-arrow{position:absolute;width:95px;height:82px;fill:none;stroke:var(--pink);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;pointer-events:none;bottom:-20px}
+.arrow-to-right{right:-110px}
+.arrow-to-left{left:-110px;transform:scaleX(-1)}
+.experience-details{display:grid;grid-template-columns:.8fr 1fr 1.35fr;gap:40px;margin-top:36px;padding-top:30px;border-top:1px solid var(--line)}
+.experience-details h3{font-size:23px;line-height:1.22;margin:0 0 10px;letter-spacing:-.02em}
+.experience-details p{font-size:17px;line-height:1.5;color:var(--muted);margin:0}
+.experience-section .benefits-footnote{margin-top:24px;font-size:14px;line-height:1.6;max-width:1080px}
+@media(max-width:1000px){.experience-map{column-gap:48px;grid-template-columns:minmax(0,1fr) 85px minmax(0,1fr)}.experience-point h3{font-size:28px}.experience-arrow{width:80px;right:-62px}.arrow-to-left{left:-62px;right:auto}}
+@media(max-width:760px){
+ .experience-heading{margin-bottom:22px;text-align:left}.experience-heading h2{font-size:42px;max-width:440px}.experience-heading>p:last-child{font-size:20px}
+ .experience-map{grid-template-columns:minmax(0,1fr) 58px minmax(0,1fr);column-gap:12px;row-gap:18px;padding:18px 0 22px}
+ .experience-straw .visual{height:590px}.experience-straw:before{inset:0 -12px}
+ .experience-point{padding:8px 0 35px;max-width:none}.experience-point h3{font-size:23px;line-height:1.16;margin-bottom:12px;overflow-wrap:normal}
+ .experience-eyebrow{font-size:10px!important;letter-spacing:.07em;margin-bottom:10px!important}
+ .experience-point>p:not(.experience-eyebrow){font-size:16px;line-height:1.5}
+ .point-duration{margin-top:8px}.point-duration h3{font-size:22px}.point-duration h3 strong{font-size:52px}
+ .point-edible{margin-top:85px}.point-wrapper{margin-top:20px}
+ .experience-arrow{width:47px;height:50px;stroke-width:3;bottom:-7px}.arrow-to-right{right:-21px}.arrow-to-left{left:-21px;right:auto}
+ .experience-details{grid-template-columns:1fr;gap:22px;margin-top:12px;padding-top:26px}.experience-details h3{font-size:22px}.experience-details p{font-size:16px}
+}
+@media(max-width:365px){.experience-map{grid-template-columns:minmax(0,1fr) 45px minmax(0,1fr);gap:15px 9px}.experience-point h3{font-size:20px}.experience-point>p:not(.experience-eyebrow){font-size:15px}.experience-heading h2{font-size:38px}.point-duration h3 strong{font-size:47px}}
+@media print{.experience-map{grid-template-columns:1fr 65px 1fr;column-gap:50px;row-gap:20px}.experience-straw .visual{height:380px}.experience-point h3{font-size:23px}.experience-point>p:not(.experience-eyebrow){font-size:14px}.experience-heading h2{font-size:36px}.experience-details{grid-template-columns:1fr 1fr 1fr}.experience-details h3{font-size:17px}.experience-details p{font-size:12px}}
